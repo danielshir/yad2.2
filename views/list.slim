@@ -26,10 +26,10 @@ html
           - unless q == @query
               li
                 - name = q.name.present? ? q.name : 'ללא שם'
-                a(href="/yad2/rent/query/#{q.id}" target='_blank')=name
+                a(href="/yad2/sales/query/#{q.id}" target='_blank')=name
     .new-query
-      .url = 'http://www.yad2.co.il/Nadlan/rent.php?'
-      input type='text' name='new-query' data-url="/yad2/rent" placeholder='שאילתת חיפוש חדשה'
+      .url = 'http://www.yad2.co.il/Nadlan/sales.php?'
+      input type='text' name='new-query' data-url="/yad2/sales" placeholder='שאילתת חיפוש חדשה'
     - if @query
       ul.apartments
         - @query.apartments.order_by(:updated_at.desc,:id.desc).where(archived: false).each do |a|
