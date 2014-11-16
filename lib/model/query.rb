@@ -17,7 +17,8 @@ class Query
   def self.create_url(params)
     uri = Addressable::URI.new
     uri.host = 'www.yad2.co.il'
-    uri.path = "/Nadlan/rent.php"
+    # uri.path = "/Nadlan/rent.php"
+    uri.path = "/Nadlan/sales.php" # changed by Daniel - for sales!
     uri.scheme = 'http'
     uri.query_values = params
     url = uri.to_s
